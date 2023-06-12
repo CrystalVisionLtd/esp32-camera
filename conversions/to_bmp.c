@@ -151,8 +151,13 @@ static bool _rgb565_write(void * arg, uint16_t x, uint16_t y, uint16_t w, uint16
             uint16_t g = data[ix+1];
             uint16_t b = data[ix+2];
             uint16_t c = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+#if CONFIG_CAMERA_SWAP_RGB565
+            o[ix2] = c>>8;
+            o[ix2+1] = c&0xff;
+#else
             o[ix2+1] = c>>8;
             o[ix2] = c&0xff;
+#endif
         }
         data+=w;
     }

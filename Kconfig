@@ -186,6 +186,12 @@ menu "Camera configuration"
         help
             Enable this option if you want to use RGB565/YUV422/YUV420/YUV411 format conversion.
 
+    config CAMERA_SWAP_RGB565
+        bool "Swap RGB565 bytes when converting from JPEG"
+        default y
+        help
+            Swap the RGB565 bytes when converting from JPEG. Useful for LVGL applications.
+
     choice CAMERA_CONV_PROTOCOL
         bool "Camera converter protocol"
         depends on CAMERA_CONVERTER_ENABLED
