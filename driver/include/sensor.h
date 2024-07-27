@@ -94,6 +94,7 @@ typedef enum {
     FRAMESIZE_SVGA,     // 800x600
     FRAMESIZE_XGA,      // 1024x768
     FRAMESIZE_HD,       // 1280x720
+    FRAMESIZE_1280X960, // 1280x960
     FRAMESIZE_SXGA,     // 1280x1024
     FRAMESIZE_UXGA,     // 1600x1200
     // 3MP Sensors
